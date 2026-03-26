@@ -1010,6 +1010,26 @@ const en = {
   'collab.polls.options': 'Options',
   'collab.polls.delete': 'Delete',
   'collab.polls.closedSection': 'Closed',
+
+  'ai.title': 'AI Trip Planner',
+  'ai.destination': 'Destination',
+  'ai.destinationPlaceholder': 'e.g. Paris, France',
+  'ai.preferences': 'Preferences (optional)',
+  'ai.preferencesPlaceholder': 'e.g. Focus on art museums and local food',
+  'ai.generatePlan': 'Generate AI Plan',
+  'ai.generating': 'Generating...',
+  'ai.generateError': 'Failed to generate plan. Please try again.',
+  'ai.saveError': 'Failed to save places. Please try again.',
+  'ai.planReady': 'Plan Ready!',
+  'ai.days': 'days',
+  'ai.places': 'places',
+  'ai.day': 'Day',
+  'ai.addToTrip': 'Add to Trip',
+  'ai.saving': 'Adding...',
+  'ai.added': 'Added!',
+  'ai.newPlan': 'New Plan',
+  'ai.info': 'AI will suggest places based on your destination and preferences. You can review and add them to your trip.',
+  'ai.button': 'AI Plan',
 }
 
 export default en

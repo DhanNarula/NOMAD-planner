@@ -238,7 +238,7 @@ export const backupApi = {
     URL.revokeObjectURL(url)
   },
   delete: (filename) => apiClient.delete(`/backup/${filename}`).then(r => r.data),
-  restore: (filename) => apiClient.post(`/backup/restore/${filename}`).then(r => r.data),
+  restore: (filename) => apiClient.post('/backup/restore/${filename}').then(r => r.data),
   uploadRestore: (file) => {
     const form = new FormData()
     form.append('backup', file)
@@ -246,6 +246,11 @@ export const backupApi = {
   },
   getAutoSettings: () => apiClient.get('/backup/auto-settings').then(r => r.data),
   setAutoSettings: (settings) => apiClient.put('/backup/auto-settings', settings).then(r => r.data),
+}
+
+export const aiApi = {
+  generatePlan: (data) => apiClient.post('/ai/generate-plan', data).then(r => r.data),
+  addPlaces: (data) => apiClient.post('/ai/add-places', data).then(r => r.data),
 }
 
 export default apiClient

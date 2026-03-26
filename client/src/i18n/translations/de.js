@@ -1010,6 +1010,26 @@ const de = {
   'collab.polls.options': 'Optionen',
   'collab.polls.delete': 'Löschen',
   'collab.polls.closedSection': 'Geschlossen',
+
+  'ai.title': 'KI Reiseplaner',
+  'ai.destination': 'Reiseziel',
+  'ai.destinationPlaceholder': 'z.B. Paris, Frankreich',
+  'ai.preferences': 'Präferenzen (optional)',
+  'ai.preferencesPlaceholder': 'z.B. Kunstmuseen und lokale Küche bevorzugen',
+  'ai.generatePlan': 'KI-Plan erstellen',
+  'ai.generating': 'Wird erstellt...',
+  'ai.generateError': 'Plan konnte nicht erstellt werden. Bitte erneut versuchen.',
+  'ai.saveError': 'Orte konnten nicht gespeichert werden. Bitte erneut versuchen.',
+  'ai.planReady': 'Plan fertig!',
+  'ai.days': 'Tage',
+  'ai.places': 'Orte',
+  'ai.day': 'Tag',
+  'ai.addToTrip': 'Zur Reise hinzufügen',
+  'ai.saving': 'Wird hinzugefügt...',
+  'ai.added': 'Hinzugefügt!',
+  'ai.newPlan': 'Neuer Plan',
+  'ai.info': 'KI schlägt Orte basierend auf deinem Reiseziel und Präferenzen vor. Du kannst sie überprüfen und zu deiner Reise hinzufügen.',
+  'ai.button': 'KI Plan',
 }
 
 export default de

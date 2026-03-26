@@ -1,8 +1,8 @@
-require('dotenv').config();
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const express = require('express');
 const cors = require('cors');
 const helmet = require('helmet');
-const path = require('path');
 const fs = require('fs');
 
 const app = express();
@@ -73,6 +73,7 @@ const settingsRoutes = require('./routes/settings');
 const budgetRoutes = require('./routes/budget');
 const collabRoutes = require('./routes/collab');
 const backupRoutes = require('./routes/backup');
+const aiRoutes = require('./routes/ai');
 
 const oidcRoutes = require('./routes/oidc');
 app.use('/api/auth', authRoutes);
@@ -111,6 +112,7 @@ app.use('/api/maps', mapsRoutes);
 app.use('/api/weather', weatherRoutes);
 app.use('/api/settings', settingsRoutes);
 app.use('/api/backup', backupRoutes);
+app.use('/api/ai', aiRoutes);
 
 // Serve static files in production
 if (process.env.NODE_ENV === 'production') {

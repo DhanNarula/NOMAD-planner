@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import ReactDOM from 'react-dom'
-import { Search, Plus, X, CalendarDays, Pencil, Trash2, ExternalLink, Navigation } from 'lucide-react'
+import { Search, Plus, X, CalendarDays, Pencil, Trash2, ExternalLink, Navigation, Sparkles } from 'lucide-react'
 import PlaceAvatar from '../shared/PlaceAvatar'
 import { getCategoryIcon } from '../shared/categoryIcons'
 import { useTranslation } from '../../i18n'
@@ -9,7 +9,7 @@ import { useContextMenu, ContextMenu } from '../shared/ContextMenu'
 
 export default function PlacesSidebar({
   places, categories, assignments, selectedDayId, selectedPlaceId,
-  onPlaceClick, onAddPlace, onAssignToDay, onEditPlace, onDeletePlace, days, isMobile,
+  onPlaceClick, onAddPlace, onAssignToDay, onEditPlace, onDeletePlace, days, isMobile, onAIGenerate,
 }) {
   const { t } = useTranslation()
   const ctxMenu = useContextMenu()
@@ -44,11 +44,25 @@ export default function PlacesSidebar({
             display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
             width: '100%', padding: '8px 12px', borderRadius: 12, border: 'none',
             background: 'var(--accent)', color: 'var(--accent-text)', fontSize: 13, fontWeight: 500,
-            cursor: 'pointer', fontFamily: 'inherit', marginBottom: 10,
+            cursor: 'pointer', fontFamily: 'inherit', marginBottom: 8,
           }}
         >
           <Plus size={14} strokeWidth={2} /> {t('places.addPlace')}
         </button>
+
+        {onAIGenerate && (
+          <button
+            onClick={onAIGenerate}
+            style={{
+              display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 6,
+              width: '100%', padding: '8px 12px', borderRadius: 12, border: '1px solid var(--accent)',
+              background: 'transparent', color: 'var(--accent)', fontSize: 13, fontWeight: 500,
+              cursor: 'pointer', fontFamily: 'inherit', marginBottom: 10,
+            }}
+          >
+            <Sparkles size={14} strokeWidth={2} /> {t('ai.button')}
+          </button>
+        )}
 
         {/* Filter-Tabs */}
         <div style={{ display: 'flex', gap: 4, marginBottom: 8 }}>
